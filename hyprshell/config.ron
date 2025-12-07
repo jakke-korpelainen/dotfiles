@@ -6,7 +6,7 @@
         items_per_row: 5,
         overview: (
             launcher: (
-                default_terminal: "kitty",
+                default_terminal: None,
                 launch_modifier: "ctrl",
                 width: 650,
                 max_items: 5,
@@ -17,8 +17,8 @@
                         show_execs: true,
                         show_actions_submenu: true,
                     ),
-                    terminal: (),
-                    shell: (),
+                    terminal: None,
+                    shell: None,
                     websearch: (
                         engines: [
                             (
@@ -28,8 +28,8 @@
                             ),
                         ],
                     ),
-                    calc: (),
-                    path: (),
+                    calc: None,
+                    path: None,
                     actions: (
                         actions: [
                             lock_screen,
@@ -64,6 +64,12 @@
             filter_by: [],
             hide_filtered: false,
         ),
-        switch: None,
+        switch: (
+            modifier: "alt",
+            filter_by: [
+                current_monitor,
+            ],
+            switch_workspaces: false,
+        ),
     ),
 )
