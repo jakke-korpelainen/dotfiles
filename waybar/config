@@ -41,7 +41,7 @@
 	},
 	"custom/power": {
 		"format": "󰐥",
-		"on-click": "$HOME/bin/waybar-power.sh"
+		"on-click": "$HOME/bin/scripts/waybar-power.sh"
 	},
 	"clock": {
 		"format": "󰅐 {:%H:%M}",
