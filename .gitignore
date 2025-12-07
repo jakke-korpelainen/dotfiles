@@ -10,6 +10,10 @@
 # Ignore not interesting files
 **/Code - OSS/
 **/Proton*/
+**/Electron/
+**/htop/
+**/autostart/
+**/yay/
 **/discord/
 **/qBittorrent/
 **/Slack/
