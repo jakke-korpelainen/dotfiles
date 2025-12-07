@@ -1,13 +1,12 @@
 # Ignore all cache directories
 **/[Cc]ache/
-discord/Cache/
-discord/Code Cache/
-discord/GPUCache/
-discord/IndexedDB/
-discord/Local Storage/
-OSS/logs/*
-OSS/Cache/*
-OSS/Cache/Cache_Data/*
+**/[Tt]emp/
+**/discord/Cache/
+**/discord/Code Cache/
+**/discord/GPUCache/
+**/discord/IndexedDB/
+**/discord/Local Storage/
+**/Code - OSS/*
 
 # Ignore all telemetry directories
 **/*telemetry*/
