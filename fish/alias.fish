@@ -1,3 +1,5 @@
+# aliases
+alias calc='kalker'
 alias dev='cd ~/Development'
 alias zed='zeditor'
 alias gs='git status'
