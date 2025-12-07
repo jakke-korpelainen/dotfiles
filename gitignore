@@ -1,0 +1,31 @@
+# Ignore all cache directories
+**/[Cc]ache/
+discord/Cache/
+discord/Code Cache/
+discord/GPUCache/
+discord/IndexedDB/
+discord/Local Storage/
+OSS/logs/*
+OSS/Cache/*
+OSS/Cache/Cache_Data/*
+
+# Ignore all telemetry directories
+**/*telemetry*/
+
+# Ignore all log files
+**/[Ll]ogs/
+*.log
+
+# Ignore common temporary files
+*.tmp
+*.swp
+*.swo
+
+# Ignore common backup files
+*~
+*.bak
+*.backup
+
+# Ignore common system and application logs
+*.log.*
+*.log
