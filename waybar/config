@@ -1,0 +1,94 @@
+{
+	"position": "top",
+	"height": 38,
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [],
+	"modules-right": [
+		"tray",
+		"network",
+		"cpu",
+		"memory",
+		"pulseaudio",
+		"custom/date",
+		"clock",
+		"custom/power"
+	],
+	"hyprland/window": {
+	    "format": "{}",
+		"icon": true
+	},
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"persistent-workspaces": {
+			"*": 3
+		},
+		"format-icons": {
+			"1": "/main",
+			"2": "/www",
+			"3": "/chat"
+		}
+	},
+	"custom/date": {
+		"format": "󰸗 {}",
+		"interval": 3600,
+		"exec": "$HOME/bin/waybar-date.sh"
+	},
+	"custom/power": {
+		"format": "󰐥",
+		"on-click": "$HOME/bin/waybar-power.sh"
+	},
+	"clock": {
+		"format": "󰅐 {:%H:%M}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"cpu": {
+		"format": "CPU {usage}%",
+		"tooltip": false,
+		"interval": 5
+	},
+	"memory": {
+		"format": "RAM {}%",
+		"tooltip": false,
+		"interval": 5
+	},
+	"network": {
+		"interface": "wgnet0",
+		"format-wifi": "  {essid}",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "󰤮 Disconnected",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": "{volume}% ",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"tray": {
+		"spacing": 10
+	}
+}

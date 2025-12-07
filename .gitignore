@@ -1,15 +1,26 @@
 # Ignore all cache directories
-**/[Cc]ache/
-**/[Tt]emp/
-**/discord/Cache/
-**/discord/Code Cache/
-**/discord/GPUCache/
-**/discord/IndexedDB/
-**/discord/Local Storage/
-**/Code - OSS/*
-
+**/*[Cc]ache*/
+**/*[Tt]emp/
+**/Local Storage/
+**/Session Storage/
+**/History/
 # Ignore all telemetry directories
 **/*telemetry*/
+
+# Ignore not interesting files
+**/Code - OSS/
+**/Proton*/
+**/discord/
+**/qBittorrent/
+**/cachyos/
+**/nextjs-nodejs/
+**/micro/
+**/pulse/
+**/gh/
+htoprc
+filedialog.conf
+cachyos-hello.json
+pavucontrol.ini
 
 # Ignore all log files
 **/[Ll]ogs/
