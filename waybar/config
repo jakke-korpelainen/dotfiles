@@ -30,7 +30,8 @@
 		"format-icons": {
 			"1": "/main",
 			"2": "/www",
-			"3": "/chat"
+			"3": "/chat",
+			"4": "/games"
 		}
 	},
 	"custom/date": {
