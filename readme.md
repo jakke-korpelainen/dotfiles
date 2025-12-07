@@ -1,16 +1,17 @@
 # .config
 currently from cachyos on a non-laptop pc, setup mostly with tokyo night storm theme
 
-| category | apps |
-|----------|------|
-| terminal | kitty |
-| calculator | kalker |
-| shell    | fish  |
-| editor   | zed   |
-| notify   | mako |
-| tiling   | hyprland |
-| hyprland | waybar, wofi, hyprshell, grim |
-| file manager | nemo |
+| category     | apps                           |
+|--------------|--------------------------------|
+| lockscreen   | hyprlock                       |
+| terminal     | kitty                          |
+| calculator   | kalker                         |
+| shell        | fish                           |
+| editor       | zed                            |
+| notify       | mako                           |
+| tiling       | hyprland                       |
+| hyprland     | waybar, wofi, hyprshell, grim  |
+| file manager | nemo                           |
 
 ## .config/scripts
 | script                    | description                                                  |
