@@ -46,23 +46,31 @@ window#waybar {
 
 #workspaces button {
     padding: 5px 10px;
+    margin: 0 5px;
     color: #c0caf5;
+    border-radius: 5px;
+    background-color: #24283b;
+    border: 1px solid #565f89;
 }
 #workspaces button.active {
     color: #bb9af7;
-    border-color: #3d59a1;
+    border-color: #bb9af7;
+    background-color: #24283b;
+}
+#workspaces button.active:hover {
+    color: #bb9af7;
+    border-color: #bb9af7;
     background-color: #24283b;
 }
 #workspaces button.focused {
-    color: #24283b;
-    background-color: #7aa2f7;
-    border-radius: 5px;
+    color: #bb9af7;
+    background-color: #24283b;
+    border-color: #bb9af7;
 }
-
 #workspaces button:hover {
-    background-color: #7dcfff;
-    color: #24283b;
-    border-radius: 5px;
+    background-color: #24283b;
+    border-color: #565f89;
+    color: #bb9af7;
 }
 
 .modules-right * {
@@ -83,24 +91,20 @@ window#waybar {
 }
 
 #custom-power {
+    margin-left: 10px;
     margin-right: 10px;
 }
 
 #custom-date {
-    color: #7dcfff;
+    color: #bb9af7;
 }
 
 #clock {
-    color: #b48ead;
+    color: #bb9af7;
     border-radius: 0px 5px 5px 0px;
-    margin-right: 10px;
-}
-
-#network {
-    color: #f7768e;
-    border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio {
-    color: #e0af68;
+    border-radius: 5px 0px 0px 5px;
+    color: #bb9af7;
 }

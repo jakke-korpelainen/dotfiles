@@ -8,10 +8,10 @@
 	"modules-center": [],
 	"modules-right": [
 		"tray",
+		"pulseaudio",
 		"network",
 		"cpu",
 		"memory",
-		"pulseaudio",
 		"custom/date",
 		"clock",
 		"custom/power"
@@ -37,7 +37,8 @@
 	"custom/date": {
 		"format": "󰸗 {}",
 		"interval": 3600,
-		"exec": "$HOME/bin/waybar-date.sh"
+		"tooltip": false,
+		"exec": "$HOME/bin/scripts/waybar-date.sh"
 	},
 	"custom/power": {
 		"format": "󰐥",
@@ -61,7 +62,7 @@
 	"network": {
 		"interface": "wgnet0",
 		"format-wifi": "  {essid}",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+		"format-ethernet": " {ifname}: {ipaddr}/{cidr}",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰤮 Disconnected",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
