@@ -1,0 +1,3 @@
+[submodule "containers/systemd-quadlets"]
+	path = containers/systemd
+	url = https://github.com/jakke-korpelainen/systemd-quadlets
