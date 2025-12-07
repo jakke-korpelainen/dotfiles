@@ -16,12 +16,24 @@ window#waybar {
     font-size: 10px;
 }
 
-#tray {
-    margin-left: 20px;
-}
-
 #tray * {
     margin: 0 0;
+    font-size: 12px;
+    font-family: "AtkynsonMono Nerd Font";
+}
+
+#tray menu {
+    margin: 0;
+    border: 1px solid #bb9af7;
+    background: #24283b; /* Tokyo Night Storm background */
+}
+
+#tray menu menuitem {
+    background: #24283b; /* Tokyo Night Storm selection background */
+}
+
+#tray menu menuitem:hover {
+    background: #414868; /* Tokyo Night Storm cyan */
 }
 
 #workspaces {
