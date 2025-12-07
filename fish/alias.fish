@@ -1,4 +1,5 @@
 # aliases
+alias docker='echo "# re-routing to podman " && podman'
 alias calc='kalker'
 alias dev='cd ~/Development'
 alias zed='zeditor'
