@@ -1,10 +1,12 @@
 #!/bin/bash
 
-entries="⇠ Logout\n⏾ Suspend\n⭮ Reboot\n⏻ Shutdown"
+entries="🔒 Lock\n➜] Logout\n💤 Suspend\n♻️ Reboot\n🔴 Shutdown"
 
 selected=$(echo -e $entries|wofi --width 250 --height 240 --dmenu --hide-search --cache-file /dev/null | awk '{print tolower($2)}')
 
 case $selected in
+  lock)
+    hyprlock;;
   logout)
     pkill -u $USER;;
   suspend)
