@@ -16,40 +16,57 @@
 
 .window {
     margin-top: 150px;
+    border: 1px solid #bb9af7;
+    border-radius: var(--border-radius);
 }
 
 .monitor {
 }
 
 .workspace {
+    font-size: 22px;
+    font-family: "AtkynsonMono Nerd Font";
 }
 
 .client {
+    font-size: 14px;
+    font-family: "AtkynsonMono Nerd Font";
 }
 
 .client-image {
 }
 
 .launcher {
+    font-size: 16px;
 }
 
 .launcher-input {
+    outline-color: #bb9af7;
+    outline-width: 1px;
 }
 
 .launcher-results {
+    font-size: 12px;
 }
 
 .launcher-item {
+    font-size: 12px;
 }
 
 .launcher-exec {
+    font-size: 12px;
+    font-family: "AtkynsonMono Nerd Font";
 }
 
 .launcher-key {
+    font-size: 12px;
+    font-family: "AtkynsonMono Nerd Font";
 }
 
 .launcher-plugins {
 }
 
 .launcher-plugin {
+    font-size: 12px;
+    font-family: "AtkynsonMono Nerd Font";
 }
