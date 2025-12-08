@@ -10,6 +10,9 @@
 # Ignore not interesting files
 **/Code - OSS/
 **/Proton*/
+**/mozilla/
+**/mpv/*
+!/mpv/mpv.conf
 **/Electron/
 **/htop/
 **/autostart/
@@ -23,6 +26,7 @@
 **/pulse/
 **/gh/
 htoprc
+QtProject.conf
 filedialog.conf
 cachyos-hello.json
 pavucontrol.ini
