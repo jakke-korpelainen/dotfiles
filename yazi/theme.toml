@@ -1,0 +1,13 @@
+[flavor]
+dark = "tokyo-night"
+
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" }
+]
+edit = [
+	{ run = 'zeditor "$@"', block = true, for = "unix" }
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
