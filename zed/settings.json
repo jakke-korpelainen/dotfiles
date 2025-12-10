@@ -7,10 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_line_height": "standard",
+  "buffer_font_family": "AtkynsonMono Nerd Font",
+  "agent_ui_font_size": 16.0,
+  "ui_font_family": "AtkynsonMono Nerd Font Mono",
+  "terminal": {
+    "font_weight": 400.0,
+    "font_size": 12.0,
+    "font_family": "AtkynsonMono Nerd Font Mono"
+  },
   "features": {
     "edit_prediction_provider": "codestral"
   },
   "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
       "provider": "mistral",
       "model": "devstral-medium-latest"
@@ -23,7 +34,7 @@
   },
   "icon_theme": "Zed (Default)",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "dark",
     "light": "One Light",
