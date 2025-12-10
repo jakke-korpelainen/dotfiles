@@ -23,5 +23,16 @@
     "bindings": {
       "ctrl-i": "agent::ToggleFocus"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-k c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
   }
 ]
