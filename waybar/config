@@ -62,7 +62,7 @@
 	"network": {
 		"interface": "wgnet0",
 		"format-wifi": "  {essid}",
-		"format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+		"format-ethernet": " {ifname}: online",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "󰤮 Disconnected",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
