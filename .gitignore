@@ -50,3 +50,5 @@ pavucontrol.ini
 # Ignore common system and application logs
 *.log.*
 *.log
+yt-x/recent.json
+yt-x/subscriptions.json
