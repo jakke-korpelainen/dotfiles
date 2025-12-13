@@ -20,6 +20,10 @@
     "edit_prediction_provider": "codestral"
   },
   "agent": {
+    "inline_assistant_model": {
+      "provider": "mistral",
+      "model": "codestral-latest"
+    },
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
