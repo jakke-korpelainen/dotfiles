@@ -14,6 +14,23 @@ end
 
 set WORKSPACE_NUMBER $argv[1]
 
+function autorun_if_empty -a workspace_id app_name
+    set workspace_id $argv[1]
+    set app_name $argv[2]
+
+    # Get the JSON output from hyprctl clients
+    set json_output (hyprctl clients -j)
+
+    # Use jq to parse the JSON and check if the workspace is empty
+    set is_empty (echo $json_output | jq --arg workspace_id "$workspace_id" '
+       .[] | select(.workspace.id == ($workspace_id | tonumber)) | .class')
+
+    # launch app if workspace is empty
+    if test -z "$is_empty"
+        exec $app_name &
+    end
+end
+
 # Function to check if an application is running in a specific workspace
 function autorun_app_in_workspace
     set workspace_id $argv[1]
@@ -38,6 +55,8 @@ switch $WORKSPACE_NUMBER
         autorun_app_in_workspace $WORKSPACE_NUMBER firefox
     case 3
         autorun_app_in_workspace $WORKSPACE_NUMBER discord
+    case 4
+        autorun_if_empty $WORKSPACE_NUMBER steam
     case '*'
         # No specific autorun apps for other workspaces
 end
