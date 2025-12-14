@@ -4,3 +4,6 @@
 [submodule "yazi/flavors/tokyo-night.yazi"]
 	path = yazi/flavors/tokyo-night.yazi
 	url = https://github.com/BennyOe/tokyo-night.yazi
+[submodule "wireguard"]
+	path = wireguard
+	url = git@github.com:jakke-korpelainen/wireguard.git
