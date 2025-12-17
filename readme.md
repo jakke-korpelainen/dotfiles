@@ -13,6 +13,9 @@ currently from cachyos on a non-laptop pc, setup mostly with tokyo night storm t
 | hyprland     | waybar, wofi, hyprshell, grim  |
 | file manager | nemo                           |
 
+## pacman
+see ./pacman-list.md
+
 ## .config/scripts
 | script                    | description                                                  |
 |---------------------------|--------------------------------------------------------------|
