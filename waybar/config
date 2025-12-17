@@ -60,7 +60,7 @@
 		"interval": 5
 	},
 	"network": {
-		"interface": "wgnet0",
+		"interface": "proton0",
 		"format-wifi": "  {essid}",
 		"format-ethernet": " {ifname}: online",
 		"format-linked": "{ifname} (No IP) ",
