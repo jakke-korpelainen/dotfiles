@@ -13,6 +13,7 @@
 **/Proton*/
 **/mozilla/
 **/mpv/*
+**Raspberry Pi/
 !/mpv/mpv.conf
 **/Electron/
 **/htop/
