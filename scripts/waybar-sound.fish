@@ -10,10 +10,24 @@ end
 set vol_high 
 set vol_mute 
 
+set mic_off 
+set mic_on 
+
 # Check if the workspace number is provided
 if test (count $argv) -ne 1
     display_usage
     exit 1
+end
+
+function toggle_mute
+    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+    set muted (wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}')
+
+    if test "$muted" = "[MUTED]"
+        notify-send "$mic_off" "Muted"
+    else
+        notify-send "$mic_off" "Mic on"
+    end
 end
 
 # Function to change the volume and send a notification
@@ -31,7 +45,7 @@ function change_volume -a direction
     notify-send "$vol_high" "$volume"
 end
 
-function toggle_mute
+function toggle_deafen
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     set muted (wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')
 
@@ -50,4 +64,6 @@ if test "$sound_operation" = "raise" || test "$sound_operation" = "lower"
     change_volume "$sound_operation"
 else if test "$sound_operation" = "mute"
     toggle_mute
+else if test "$sound_operation" = "deafen"
+    toggle_deafen
 end
