@@ -20,9 +20,9 @@ hyprctl dispatch workspace $WORKSPACE_NUMBER
 
 # Set gaming scaling for /games workspace
 if test $WORKSPACE_NUMBER -eq 4
-    hyprctl keyword monitor "$MONITOR", "2560x1440@120",0x0,1
+    hyprctl keyword monitor "$MONITOR", "2560x1440@120",0x0,1,bitdepth,10,cm,hdr
 else
-    hyprctl keyword monitor "$MONITOR", "3840x2160@60", 0x0,2
+    hyprctl keyword monitor "$MONITOR", "3840x2160@60", 0x0,2,bitdepth,10,cm,hdr
 end
 
 # Call the autorun script with the workspace number
