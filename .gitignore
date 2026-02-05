@@ -12,7 +12,8 @@
 **/Code - OSS/
 **/Proton*/
 **/mozilla/
-**/mpv/*
+**/mpv/
+**/todo-tui/
 **Raspberry Pi/
 !/mpv/mpv.conf
 **/Electron/
