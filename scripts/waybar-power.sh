@@ -8,7 +8,7 @@ case $selected in
   lock)
     hyprlock;;
   logout)
-    pkill -u $USER;;
+    hyprctl dispatch exit;;
   suspend)
     exec systemctl suspend;;
   reboot)
