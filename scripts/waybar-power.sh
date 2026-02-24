@@ -8,7 +8,7 @@ case $selected in
   lock)
     hyprlock;;
   logout)
-    hyprctl dispatch exit;;
+    hyprshutdown -t "Logging out" -p "protonvpn disconnect";;
   suspend)
     exec systemctl suspend;;
   reboot)

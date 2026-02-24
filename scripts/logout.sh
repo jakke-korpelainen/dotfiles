@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pkill -u $USER
+hyprshutdown -t "Logging out" -p "protonvpn disconnect"
