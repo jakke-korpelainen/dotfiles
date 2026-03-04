@@ -1,4 +1,5 @@
 # aliases
+alias htop='btop'
 alias docker='echo "# re-routing to podman " && podman'
 alias explorer='yazi'
 alias files='yazi'
