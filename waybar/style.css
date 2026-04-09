@@ -1,3 +1,5 @@
+@import "/home/jwekke/.config/theme.css";
+
 * {
     border: none;
     border-radius: 0;
@@ -16,29 +18,42 @@ window#waybar {
     font-size: 10px;
 }
 
+#tray {
+    box-shadow: none;
+}
+
 #tray * {
+    box-shadow: none;
     margin: 0 0;
-    font-size: 12px;
+    font-size: 11px;
     font-family: "AtkynsonMono Nerd Font";
+    border: none;
+    background: transparent;
 }
 
 #tray menu {
     margin: 0;
-    border: 1px solid #bb9af7;
-    background: #24283b; /* Tokyo Night Storm background */
+    border: 1px solid @border; /* #bb9af7; */
+    background: @base;
+}
+
+#tray menu * {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #tray menu menuitem {
-    background: #24283b; /* Tokyo Night Storm selection background */
+    border: none;
+    background: @base; /* Tokyo Night Storm selection background */
 }
 
 #tray menu menuitem:hover {
-    background: #414868; /* Tokyo Night Storm cyan */
+    background: @cyan; /* #414868; Tokyo Night Storm cyan */
 }
 
 #workspaces {
     font-family: "AtkynsonMono Nerd Font";
-    background-color: #24283b;
+    background-color: @base; /*#24283b;*/
     margin: 5px;
     margin-left: 10px;
     border-radius: 5px;
@@ -49,28 +64,28 @@ window#waybar {
     margin: 0 5px;
     color: #c0caf5;
     border-radius: 5px;
-    background-color: #24283b;
-    border: 1px solid #565f89;
+    background-color: @base;
+    border: 1px solid @border2; /*#565f89*/
 }
 #workspaces button.active {
-    color: #bb9af7;
-    border-color: #bb9af7;
-    background-color: #24283b;
+    color: @border;
+    border-color: @border;
+    background-color: @base;
 }
 #workspaces button.active:hover {
-    color: #bb9af7;
-    border-color: #bb9af7;
-    background-color: #24283b;
+    color: @border;
+    border-color: @border;
+    background-color: @base;
 }
 #workspaces button.focused {
-    color: #bb9af7;
-    background-color: #24283b;
-    border-color: #bb9af7;
+    color: @border;
+    background-color: @base;
+    border-color: @border;
 }
 #workspaces button:hover {
-    background-color: #24283b;
-    border-color: #565f89;
-    color: #bb9af7;
+    background-color: @base;
+    border-color: @border2;
+    color: @border;
 }
 
 .modules-right * {
@@ -87,7 +102,7 @@ window#waybar {
 #cpu,
 #memory,
 #temperature {
-    background-color: #24283b;
+    background-color: @base;
 }
 
 #custom-power {
@@ -96,15 +111,15 @@ window#waybar {
 }
 
 #custom-date {
-    color: #bb9af7;
+    color: @border;
 }
 
 #clock {
-    color: #bb9af7;
+    color: @border;
     border-radius: 0px 5px 5px 0px;
 }
 
 #pulseaudio {
     border-radius: 5px 0px 0px 5px;
-    color: #bb9af7;
+    color: @border;
 }

@@ -64,7 +64,7 @@
 		"format-wifi": "  {essid}",
 		"format-ethernet": " {ifname}: online",
 		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "󰤮 Disconnected",
+		"format-disconnected": "󰤮 offline",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 		"tooltip": false
 	},
