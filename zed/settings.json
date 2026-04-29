@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "buffer_line_height": "standard",
   "buffer_font_family": "AtkynsonMono Nerd Font",
   "agent_ui_font_size": 16.0,
@@ -20,6 +32,7 @@
     "edit_prediction_provider": "codestral"
   },
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "mistral",
       "model": "codestral-latest"
