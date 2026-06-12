@@ -7,6 +7,9 @@
 # Ignore all telemetry directories
 **/*telemetry*/
 
+**/cava/shaders
+**/cava/themes
+
 # Ignore not interesting files
 **/jwekke-ai-cli/
 **/Code - OSS/
