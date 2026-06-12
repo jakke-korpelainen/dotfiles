@@ -33,7 +33,7 @@ window#waybar {
 
 #tray menu {
     margin: 0;
-    border: 1px solid @border; /* #bb9af7; */
+    border: 1px solid @border;
     background: @base;
 }
 
@@ -44,19 +44,25 @@ window#waybar {
 
 #tray menu menuitem {
     border: none;
-    background: @base; /* Tokyo Night Storm selection background */
+    background: @base;
 }
 
 #tray menu menuitem:hover {
-    background: @cyan; /* #414868; Tokyo Night Storm cyan */
+    background: @cyan;
 }
 
 #workspaces {
     font-family: "AtkynsonMono Nerd Font";
-    background-color: @base; /*#24283b;*/
+    background-color: @base;
     margin: 5px;
-    margin-left: 10px;
     border-radius: 5px;
+}
+
+#custom-launch {
+    margin: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 10px;
 }
 
 #workspaces button {
@@ -65,23 +71,27 @@ window#waybar {
     color: #c0caf5;
     border-radius: 5px;
     background-color: @base;
-    border: 1px solid @border2; /*#565f89*/
+    border: 1px solid @border2;
 }
+#custom-launch.active,
 #workspaces button.active {
     color: @border;
     border-color: @border;
     background-color: @base;
 }
+#custom-launch:hover,
 #workspaces button.active:hover {
     color: @border;
     border-color: @border;
     background-color: @base;
 }
+#custom-launch.focused,
 #workspaces button.focused {
     color: @border;
     background-color: @base;
     border-color: @border;
 }
+#custom-launch:hover,
 #workspaces button:hover {
     background-color: @base;
     border-color: @border2;
