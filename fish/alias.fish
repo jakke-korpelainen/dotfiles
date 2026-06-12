@@ -1,4 +1,5 @@
 # aliases
+alias music='cava'
 alias htop='btop'
 alias docker='echo "# re-routing to podman " && podman'
 alias explorer='yazi'
