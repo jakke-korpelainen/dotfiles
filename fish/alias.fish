@@ -1,4 +1,5 @@
 # aliases
+alias ai='podman exec -it ollama ollama run mistral'
 alias music='cava'
 alias htop='btop'
 alias docker='echo "# re-routing to podman " && podman'
