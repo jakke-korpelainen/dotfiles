@@ -58,16 +58,16 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar & hypridle &")
   hl.exec_cmd(terminal)
   hl.exec_cmd("discord --start-minimized")
-  hl.exec_cmd("hyprctl dispatch workspace 1")
   hl.exec_cmd("dbus-launch --sh-syntax > ~/.dbus-env && . ~/.dbus-env && /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh")
   hl.exec_cmd("hyprshell run &")
+  hl.dsp.focus({ workspace = 1 })
 end)
 
 -- Native Lua workspace autorun system
 local function autorun_app_if_not_running(app_name)
     -- Simple function: launch app if it's not running anywhere
     -- Window rules will handle moving it to the correct workspace
-    
+
     -- Use a temporary file to capture the output from hyprctl
     hl.exec_cmd("hyprctl clients -j > /tmp/hypr_clients.json")
     local clients_file = io.open("/tmp/hypr_clients.json", "r")
@@ -76,7 +76,7 @@ local function autorun_app_if_not_running(app_name)
         clients = clients_file:read("*a")
         clients_file:close()
     end
-    
+
     -- Check if app is running anywhere
     local app_running = false
     if clients ~= "" and clients ~= nil then
