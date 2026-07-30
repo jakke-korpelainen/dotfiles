@@ -64,28 +64,28 @@ hl.on("hyprland.start", function ()
 end)
 
 -- Native Lua workspace autorun system
-local function autorun_app(workspace_id, app_name, check_anywhere)
-    -- Generic function to launch an app if it's not running
-    -- If check_anywhere is true, check if app is running anywhere
-    -- If check_anywhere is false or nil, check if app is running on specific workspace
-    local clients = hl.exec_cmd("hyprctl clients -j") or ""
+local function autorun_app_if_not_running(app_name)
+    -- Simple function: launch app if it's not running anywhere
+    -- Window rules will handle moving it to the correct workspace
+    
+    -- Use a temporary file to capture the output from hyprctl
+    hl.exec_cmd("hyprctl clients -j > /tmp/hypr_clients.json")
+    local clients_file = io.open("/tmp/hypr_clients.json", "r")
+    local clients = ""
+    if clients_file then
+        clients = clients_file:read("*a")
+        clients_file:close()
+    end
+    
+    -- Check if app is running anywhere
     local app_running = false
-
     if clients ~= "" and clients ~= nil then
-        if check_anywhere then
-            -- Check if app is running anywhere
-            if string.find(clients, '"class":%s*"' .. app_name .. '"') then
-                app_running = true
-            end
-        else
-            -- Check if app is running on specific workspace
-            local pattern = '"workspace":%s*{%s*"id":%s*' .. workspace_id .. '[^}]*}%s*,%s*"class":%s*"' .. app_name .. '"'
-            if string.find(clients, pattern) then
-                app_running = true
-            end
+        if string.find(clients, '"class":%s*"' .. app_name .. '"') then
+            app_running = true
         end
     end
 
+    -- Launch app if not running
     if not app_running then
         hl.exec_cmd(app_name .. " &")
     end
@@ -97,12 +97,13 @@ hl.on("workspace.active", function (workspace)
     local workspace_id = workspace.id
 
     -- Autorun applications for specific workspaces
+    -- Window rules will handle moving apps to correct workspaces
     if workspace_id == 2 then
-        autorun_app(workspace_id, "firefox")
+        autorun_app_if_not_running("firefox")
     elseif workspace_id == 3 then
-        autorun_app(workspace_id, "discord")
+        autorun_app_if_not_running("discord")
     elseif workspace_id == 4 then
-        autorun_app(workspace_id, "steam", true)  -- Check anywhere for steam
+        autorun_app_if_not_running("steam")
     end
     -- Other workspaces have no specific autorun apps
 end)
@@ -326,13 +327,6 @@ for i = 1, 9 do
         -- Switch to the workspace using the correct Hyprland API
         hl.dsp.focus({ workspace = i })
     end)
-end
-
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
 end
 
 -- Switch workspaces with mainMod + [0-9]
